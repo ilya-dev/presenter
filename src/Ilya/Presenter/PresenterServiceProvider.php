@@ -16,8 +16,8 @@ class PresenterServiceProvider extends ServiceProvider {
 
         $loader = AliasLoader::getInstance();
 
-        $loader->alias('Ilya\Presenter\Presenter', 'Presenter');
-        $loader->alias('Ilya\Presenter\Facades\DecoratorFacade', 'Decorator');
+        $loader->alias('Presenter', 'Ilya\Presenter\Presenter');
+        $loader->alias('Decorator', 'Ilya\Presenter\Facades\DecoratorFacade');
 	}
 
 	/**
