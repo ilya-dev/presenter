@@ -12,7 +12,7 @@ class Decorator {
     {
         $name = \get_class($object).'Presenter';
 
-        return (new \ReflectionClass($name))->newInstance();
+        return (new \ReflectionClass($name))->newInstance($object);
     }
 
 }

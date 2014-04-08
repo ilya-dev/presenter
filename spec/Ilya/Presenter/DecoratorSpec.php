@@ -12,12 +12,13 @@ class DecoratorSpec extends ObjectBehavior {
 
     function it_decorates_an_object()
     {
-        $this->decorate(new Dummy)->shouldBeLike(new DummyPresenter);
+        $this->decorate($dummy = new Dummy)
+             ->shouldBeLike(new DummyPresenter($dummy));
     }
 
 }
 
 class Dummy {}
 
-class DummyPresenter {}
+class DummyPresenter extends \Ilya\Presenter\Presenter {}
 
