@@ -33,12 +33,7 @@ abstract class Presenter {
             return \call_user_func([$this, $name]);
         }
 
-        if (\property_exists($this->entity, $name))
-        {
-            return $this->entity->{$name};
-        }
-
-        throw new \UnexpectedValueException("Property $name does not exist");
+        return $this->entity->{$name};
     }
 
     /**

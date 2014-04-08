@@ -19,11 +19,25 @@ class BasePresenterSpec extends ObjectBehavior {
 
 class Mock {
 
+    public $bar = 'baz';
 
+    public $wow = 'such';
+
+    public function foo()
+    {
+        return 'fizz';
+    }
 
 }
 
 namespace Ilya\Presenter;
 
-class BasePresenter extends Presenter {}
+class BasePresenter extends Presenter {
+
+    public function wow()
+    {
+        return 'amaze';
+    }
+
+}
 
