@@ -11,11 +11,12 @@ class PresenterServiceProvider extends ServiceProvider {
 	 * @return void
 	 */
 	public function register()
-	{
+    {
+        $this->app->singleton('decorator', 'Ilya\Presenter\Decorator');
+
         $loader = AliasLoader::getInstance();
 
         $loader->alias('Ilya\Presenter\Presenter', 'Presenter');
-
         $loader->alias('Ilya\Presenter\Facades\DecoratorFacade', 'Decorator');
 	}
 
